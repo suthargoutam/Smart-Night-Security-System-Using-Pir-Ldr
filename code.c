@@ -30,23 +30,26 @@ void loop() {
   Serial.print("PIR Value: ");
   Serial.println(pirValue);
 
-  if (ldrValue < 50) {
-    if (pirValue == 1) {
+  if (ldrValue < 50) {  // Night time
+    Serial.println("System is activated at night....");
+
+    if (pirValue == 1) {  // Motion detected
       Serial.println("Someone detected.....");
       digitalWrite(BUZZER, HIGH);
       digitalWrite(R_LED, HIGH);
       digitalWrite(G_LED, LOW);
-    } else {
+    } else {  // No motion
       Serial.println("No one detected.....");
       digitalWrite(BUZZER, LOW);
       digitalWrite(R_LED, LOW);
       digitalWrite(G_LED, HIGH);
     }
-  } else {
+  } 
+  else {  // Day time
     Serial.println("System is off during day time");
     digitalWrite(BUZZER, LOW);
     digitalWrite(R_LED, LOW);
-    digitalWrite(G_LED, HIGH);
+    digitalWrite(G_LED, LOW);
   }
 
   delay(500);
