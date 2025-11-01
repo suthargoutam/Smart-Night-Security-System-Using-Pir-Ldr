@@ -65,8 +65,8 @@ When it becomes dark (LDR value < 50), the **PIR sensor** is activated. If motio
 
 ## 📂 Project Files
 - **code.c** → Contains main project source code  
-- **circuit_diagram.jpg** → Complete circuit wiring layout  
-- **project_image.jpg** → Real prototype working image  
+- **circuit_diagram.png** → Complete circuit wiring layout  
+- **project_image.jpeg** → Real prototype working image  
 - **README.md** → Project documentation file  
 
 ---
